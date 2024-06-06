@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Prata&display=swap');
+
+body{background-color: #e7d7c1; font-size: 16pt; font-family: 'Prata';}
+.dropbtn {
+  background-image: linear-gradient(
+    90deg,
+    green,
+    white,
+    red
+  );
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #0dff05;}
+
+.dropbtn{font-size: 24pt;}
+
+p{text-align: justify; }
+
+h1
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    green 0%,
+    white 29%,
+    white 67%,
+    red 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+table{margin: auto; /*Beállítottam az automatikus margót, amely által középre került a táblázat.*/
+text-align: center; /*Beállítotam, hogy középre igazítsa a szöveget a táblázat celláiban.*/
+}
+
+table, th, td {
+  border: 1px solid black; /*Az egész táblázatnak, az oszlopoknak és a celláknak állítottam be szegélyt, amely 1px széles sima egyenes fekete vonal legyen.*/
+  border-collapse: collapse; /*Itt az állítottam be, hogy összevontak legyenek a szegélyek ne külön álló kockák.*/
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 70%;
+  }
+}
+
+
+.bevezetes{
+  width: 60%; 
+  background-color:#a1c181 ;
+  border: solid 5px#619b8a ;
+  border-radius: 15px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #619b8a;
+}
+.foldrajz{
+  width: 60%; /*Ebben a sorban beállítottam milyen szélességben helyezkedjen el a weblapon.*/
+  background-color: white ; /*Beállítottam, hogy milyen színű hátter legyen a bekezdésnek.*/
+  border: solid 5px #b7b7a4;/*Beállítottam, hogy legyen a bekezdésnek szegélye.*/
+  border-radius: 15px;/*Lekerekítettem a szegély sarkait.*/
+  padding: 15px;/*Állítottam a bekezdésben belső margót, hogy megfelelő távolság legyen a szegélyektől.*/
+  margin-top: 3%;/*Külső margót állítottam be fent, hogy megfelelő távolságra legyen az előtte lévő div-től/bekezdéstől.*/
+  margin-left: auto;/*Beállítottam, hogy a bal margótól megfelelő távolságra legyen ezáltal középre kerüljön.*/
+  margin-right: auto;/*Beállítottam, hogy a jobb margótól megfelelő távolságra legyen ezáltal középre kerüljön.*/
+  box-shadow: 5px 10px #b7b7a4;
+}
+
+.tortenelem{
+  width: 60%;
+  background-color:#ff5a5f ;
+  border: solid 5px #c81d25;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #c81d25;
+}
+.allam{
+  width: 60%;
+  background-color:#a1c181 ;
+  border: solid 5px#619b8a ;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #619b8a;
+}
+.nepesseg{
+  width: 60%;
+  background-color: white ;
+  border: solid 5px #b7b7a4;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #b7b7a4;
+}
+
+.turizmus{
+  width: 60%;
+  background-color:#ff5a5f ;
+  border: solid 5px #c81d25;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #c81d25;
+}
+
+.kultura{
+  width: 60%;
+  background-color:#a1c181 ;
+  border: solid 5px#619b8a ;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #619b8a;
+}
+.gasztronomia{
+  width: 60%;
+  background-color: white ;
+  border: solid 5px #b7b7a4;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #b7b7a4;
+  margin-bottom: 3%;
+}
+
+.rtortenelem{
+  width: 60%;
+  background-color: white ;
+  border: solid 5px #b7b7a4;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #b7b7a4;
+}
+
+.varosszerkezet{
+  width: 60%;
+  background-color:#ff5a5f ;
+  border: solid 5px #c81d25;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #c81d25;
+}
+
+.latnivalok{
+  width: 60%;
+  background-color:#a1c181 ;
+  border: solid 5px#619b8a ;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #619b8a;
+  margin-bottom: 3%;
+}
+.mlatnivalok{
+  width: 60%;
+  background-color:#ff5a5f ;
+  border: solid 5px #c81d25;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #c81d25;
+}
+
+.mgasztro{
+  width: 60%;
+  background-color:#a1c181 ;
+  border: solid 5px#619b8a ;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px #619b8a;
+  margin-bottom: 3%;
+}
+
+
+hr{border: solid #b7b7a4 2px;
+width: 80%;}
+
+footer{
+  text-align: center;
+}
+
+.main{display: flex; flex-direction: column;}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border: solid 5px #b7b7a4;
+  box-shadow: 6px 4px 20px gray;
+  border-radius: 15px;
+}
+
+.felosztás{display: block;
+  float: right;
+  margin-right: 90px;
+  margin-top: 80px;
+  width: 40%;
+  border: solid 5px #b7b7a4;
+  box-shadow: 6px 4px 20px gray;
+  border-radius: 15px;
+}
+
+.fagyi{display: block;
+  float: left;
+  width: 25%;
+  margin-right: 20px;
+  border: solid 5px #b7b7a4;
+  box-shadow: 6px 4px 20px gray;
+  border-radius: 15px;}
+
+.rizotto{
+  display: block;
+  float: right;
+  margin: 20px;
+  width: 25%;
+  margin-right: 20px;
+  border: solid 5px #b7b7a4;
+  box-shadow: 6px 4px 20px gray;
+  border-radius: 15px;
+  }
+
+.panettone{
+  display: block;
+  float: left;
+  margin: 20px;
+  width: 30%;
+  margin-right: 20px;
+  border: solid 5px #b7b7a4;
+  box-shadow: 6px 4px 20px gray;
+  border-radius: 15px;
+}
+
+.kep{
+  text-align: right;
+  margin-right: 100px;
+  font-weight: bold;
+}
+
+.img-gallery{
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.img-gallery img{
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-gallery img:hover{
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgb(68, 77, 136, 0.2);
+}
+
+.full-img{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+h2.teszt{
+  text-align: center;
+}

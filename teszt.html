@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" type="x-icon" href="test.png">
+    <link rel="stylesheet" href="egyseges.css">
+    <title>Tudásellenőrző Teszt</title>
+    <style>
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tudásellenőrző Teszt</h1>
+    <form id="quizForm">
+        <!-- Kérdés 1 -->
+        <div>
+            <label>1.Hány km2 Olaszország szárazföldi része?</label><br>
+            <input type="radio" id="7210" name="elso" value="7210">
+            <label for="7210">7210</label><br>
+            <input type="radio" id="301230" name="elso" value="301230">
+            <label for="301230">301 230</label><br>
+            <input type="radio" id="294020" name="elso" value="294020">
+            <label for="294020">294 020</label><br>
+        </div>
+        <br>
+        <!-- Kérdés 2 -->
+        <div>
+            <label for="tavak">2.Melyik Olaszország legnagyobb tava?</label>
+            <select id="tavak" name="tavak">
+                <option value="Garda">Garda-tó</option>
+                <option value="Braies">Braies-tó</option>
+                <option value="Comói">Comói-tó</option>
+            </select><br><br>
+        </div>
+        <br>
+        <!-- Kérdés 3 -->
+        <div>
+            <label>3.Hány régióra osztható Olaszország?</label><br>
+            <input type="checkbox" id="18" name="regio" value="18">
+            <label for="18">18</label><br>
+            <input type="checkbox" id="20" name="regio" value="20">
+            <label for="regio">20</label><br>
+            <input type="checkbox" id="35" name="regio" value="35">
+            <label for="35">35</label><br><br>
+        </div>
+        <br>
+        <!-- Kérdés 4 -->
+        <div>
+            <label for="fovaros">4.Válaszd ki melyik Olaszország fővárosa!</label>
+            <select id="fovaros" name="fovaros">
+                <option value="milano">Milánó</option>
+                <option value="napoly">Nápoly</option>
+                <option value="roma">Róma</option>
+                <option value="velence">Velence</option>
+                <option value="firenze">Firenze</option>
+            </select><br><br>
+        </div>
+        <br>
+        <!-- Kérdés 5 -->
+        <div>
+            <label for="vulkan">5.Nevezzen meg egy napjainkban is aktívan működő vulkánt!</label>
+            <input type="text" id="vulkan" name="vulkan"><br><br>
+        </div>
+        <br>
+        <input type="submit" value="Beküldés">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Megakadályozza az űrlap alapértelmezett beküldési eseményét
+
+            var score = 0;
+            var totalQuestions = 5;
+
+            
+            // Kérdés 1: Hány km2 Olaszország szárazföldi része?
+            var elso = document.querySelector('input[name="elso"]:checked');
+            if (elso && elso.value === "294020") {
+                score++;
+            }
+
+            // Kérdés 2: Melyik Olaszország legnagyobb tava?
+            var tavak = document.getElementById("tavak").value;
+            if (tavak === "Garda") {
+                score++;
+            }
+
+            // Kérdés 3: Hány régióra osztható Olaszország?
+            var regio = document.querySelectorAll('input[name="regio"]:checked');
+            var correctLanguages = ["20"];
+            var allCorrect = Array.from(regio).every(regio => correctLanguages.includes(regio.value)) && regio.length === correctLanguages.length;
+            if (allCorrect) {
+                score++;
+            }
+
+            // Kérdés 4: Melyik a víz kémiai jele?
+            var fovaros = document.getElementById("fovaros").value;
+            if (fovaros === "roma") {
+                score++;
+            }
+
+            // Kérdés 5: Nevezzen meg egy napjainkban is aktívan működő vulkánt!
+            var vulkan = document.getElementById("vulkan").value;
+            if (vulkan.toLowerCase() === "Etna") {
+                score++;
+            }
+
+            // Eredmény megjelenítése
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Az Ön pontszáma: " + score + " / " + totalQuestions;
+
+            // Helyes és helytelen válaszok jelölése
+            
+            if (elso) {
+                elso.parentElement.className = (elso.value === "294020") ? "correct" : "incorrect";
+            }
+
+            document.getElementById("tavak").className = (tavak === "Garda") ? "correct" : "incorrect";
+
+            var checkboxes = document.querySelectorAll('input[name="regio"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.parentElement.className = correctLanguages.includes(checkbox.value) ? "correct" : "incorrect";
+            
+            document.getElementById("fovaros").className = (fovaros === "roma") ? "correct" : "incorrect";
+
+            document.getElementById("vulkan").className = (vulkan.toLowerCase() === "Etna") ? "correct" : "incorrect";
+            });
+        });
+    </script>
+</body>
+</html>
